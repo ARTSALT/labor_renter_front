@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './footer';
 import '../globals.css';
 
 
@@ -14,14 +15,13 @@ function Index() {
               forma rápida, segura e eficiente.</p>
         </div>
 
-        {/* </ImagemHome> */}
+        {/* <ImagemHome/> */}
 
         <div className='buttons_home'>
           <button className='button_home'>Eletricista</button>
           <button className='button_home'>Encanador</button>
           <button className='button_home'>Pintor</button>
         </div>
-        {/* </Footer> */}
     </div>
   );
 }
