@@ -40,3 +40,55 @@ a {
     color-scheme: dark;
   }
 }
+
+.presentation_home {
+  background-color: #8183DA; 
+  color: #ffffff; 
+  padding: 2rem; 
+  max-width: 1200px;
+  margin: 0 auto; 
+  transition: transform 0.3s ease; 
+}
+
+.presentation_home h1 {
+  font-size: 2.5rem; 
+  margin-bottom: 1rem; 
+  font-weight: 600; 
+  transition: transform 0.3s ease; 
+}
+
+.presentation_home p {
+  font-size: 1.25rem; 
+  line-height: 1.6; 
+  margin-bottom: 1.5rem; 
+  transition: transform 0.3s ease; 
+}
+
+.presentation_home:hover h1,
+.presentation_home:hover p {
+  transform: scale(1.05); 
+}
+
+.buttons_home {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button_home {
+  background-color: #8183DA; 
+  color: #ffffff; 
+  padding: 0.5rem 1rem; 
+  border: 2px solid #8183DA; 
+  border-radius: 0.25rem; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  transition: transform 0.3s ease; 
+}
+
+.button_home:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #8183DA; 
+}
