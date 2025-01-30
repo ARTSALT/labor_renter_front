@@ -24,6 +24,19 @@ function RegistrationForm() {
         });
     };
 
+    const validateForm = () => {
+        if (!formData.nomeCompleto) newErrors.nomeCompleto = "Nome completo é obrigatório";
+        if (!formData.email) newErrors.email = "E-mail é obrigatório";
+        if (!formData.senha) newErrors.senha = "Senha é obrigatória";
+        if (!formData.cpf) newErrors.cpf = "CPF é obrigatório";
+        if (!formData.cep) newErrors.cep = "CEP é obrigatório";
+        if (!formData.rua) newErrors.rua = "Rua é obrigatória";
+        if (!formData.numero) newErrors.numero = "Número é obrigatório";
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0; 
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault(); 
 
