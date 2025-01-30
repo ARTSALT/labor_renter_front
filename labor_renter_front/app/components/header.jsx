@@ -30,8 +30,8 @@ function Header() {
       </form>
 
       <div className="header-right">
-        <button className="btn login" onClick={() => router.push("/login")}>Login</button>
-        <button className="btn signup" onClick={() => router.push("/cadastro")}>Cadastro</button>
+        <button className="btn login" onClick={() => router.push("/pages/login")}>Login</button>
+        <button className="btn signup" onClick={() => router.push("/pages/cadastro")}>Cadastro</button>
       </div>
     </header>
   );
