@@ -46,7 +46,7 @@ a {
   color: #ffffff; 
   padding: 2rem; 
   max-width: 1200px;
-  margin: 0 auto; 
+  margin: 10vh auto; 
   transition: transform 0.3s ease; 
 }
 
@@ -73,7 +73,7 @@ a {
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
-  cursor: pointer;
+  
 }
 
 .button_home {
@@ -91,7 +91,8 @@ a {
 .button_home:hover {
   transform: scale(1.05);
   background-color: #ffffff;
-  color: #8183DA; 
+  color: #8183DA;
+  cursor: pointer;
 }
 
 .footer {
@@ -128,6 +129,7 @@ a {
   width: 100%;
   position: fixed;
   top:0;
+  
 }
 
 .logo {
@@ -207,7 +209,7 @@ a {
 
 /* Cadastro */
 
-.registration_form {
+.registration_form , .login_form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +218,7 @@ a {
   margin: 10vh
 }
 
-.registration_form h1 {
+.registration_form, .login_form h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -257,3 +259,4 @@ form {
 
 
 /* Login */
+
