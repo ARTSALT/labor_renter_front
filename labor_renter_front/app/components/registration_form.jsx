@@ -16,6 +16,8 @@ function RegistrationForm() {
         complemento: ""
     });
 
+    const [errors, setErrors] = useState({});
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -25,6 +27,8 @@ function RegistrationForm() {
     };
 
     const validateForm = () => {
+        const newErrors = {};
+
         if (!formData.nomeCompleto) newErrors.nomeCompleto = "Nome completo é obrigatório";
         if (!formData.email) newErrors.email = "E-mail é obrigatório";
         if (!formData.senha) newErrors.senha = "Senha é obrigatória";
@@ -34,11 +38,19 @@ function RegistrationForm() {
         if (!formData.numero) newErrors.numero = "Número é obrigatório";
 
         setErrors(newErrors);
-        return Object.keys(newErrors).length === 0; 
-    }
+
+        if (Object.keys(newErrors).length > 0) {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+            return false;
+        }
+
+        return true;
+    };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
+
+        if (!validateForm()) return;
 
         try {
             const response = await fetch("http://localhost:8080/api/v1/contractor", {
