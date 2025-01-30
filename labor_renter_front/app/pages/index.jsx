@@ -1,12 +1,14 @@
 import React from 'react';
-import Footer from './footer';
+import Footer from '../components/Footer';
 import '../globals.css';
+import Header from '../components/Header';
+
 
 
 function Index() {
   return (
     <div className="home">
-        {/* </Header> */}
+        <Header />
         <div className='presentation_home'>
             <h1>Nossa Missão</h1>
             <p>Na Labor Renter, nossa missão é simplificar a maneira como você encontra e 
@@ -22,6 +24,8 @@ function Index() {
           <button className='button_home'>Encanador</button>
           <button className='button_home'>Pintor</button>
         </div>
+
+        <Footer />
     </div>
   );
 }

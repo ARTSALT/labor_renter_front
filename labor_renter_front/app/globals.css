@@ -73,6 +73,7 @@ a {
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .button_home {
@@ -112,4 +113,92 @@ a {
 .footer p {
   margin: 0;
   font-size: 1rem;
+}
+
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #8183DA;
+  color: white;
+  margin-bottom: 10vh;
+}
+
+.logo {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50px
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.login {
+  background-color: #8183DA; 
+  color: #ffffff; 
+  padding: 0.5rem 1rem; 
+  border: 2px solid #8183DA; 
+  border-radius: 0.25rem; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  transition: transform 0.3s ease; 
+}
+
+.login:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #8183DA; 
+}
+
+
+.signup {
+  background-color: #8183DA; 
+  color: #ffffff; 
+  padding: 0.5rem 1rem; 
+  border: 2px solid #8183DA; 
+  border-radius: 0.25rem; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  transition: transform 0.3s ease; 
+}
+
+.signup:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #8183DA; 
 }
