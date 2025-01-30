@@ -1,4 +1,4 @@
-"use client"; // Necessário para usar `useRouter`
+"use client"; 
 
 import React from "react";
 import Link from "next/link";

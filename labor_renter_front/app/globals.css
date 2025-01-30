@@ -125,7 +125,9 @@ a {
   padding: 10px 20px;
   background-color: #8183DA;
   color: white;
-  margin-bottom: 10vh;
+  width: 100%;
+  position: fixed;
+  top:0;
 }
 
 .logo {
@@ -202,3 +204,56 @@ a {
   background-color: #ffffff;
   color: #8183DA; 
 }
+
+/* Cadastro */
+
+.registration_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  min-height: calc(100vh - 150px);
+  margin: 10vh
+}
+
+.registration_form h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form_group {
+  display: flex;
+  gap: 10px; 
+  margin-bottom: 15px;
+}
+
+.form_group input {
+  flex: 1; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form_group button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8183DA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form_group button:hover {
+  background-color: #ffffff;
+  color: #8183DA;
+}
+
+
+/* Login */
