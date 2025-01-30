@@ -8,7 +8,6 @@ function RegistrationForm() {
         nomeCompleto: "",
         email: "",
         senha: "",
-        dataNascimento: "",
         confirmarSenha: "",
         cpf: "",
         cep: "",
@@ -79,16 +78,7 @@ function RegistrationForm() {
                         value={formData.senha}
                         onChange={handleChange}
                     />
-                    <input
-                        type="date"
-                        name="dataNascimento"
-                        placeholder="Data de Nascimento"
-                        value={formData.dataNascimento}
-                        onChange={handleChange}
-                    />
-                </div>
 
-                <div className="form_group">
                     <input
                         type="password"
                         name="confirmarSenha"
@@ -96,6 +86,11 @@ function RegistrationForm() {
                         value={formData.confirmarSenha}
                         onChange={handleChange}
                     />
+
+                </div>
+
+                <div className="form_group">
+                    
                     <input
                         type="text"
                         name="cpf"
