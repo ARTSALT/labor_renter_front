@@ -3,8 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import "../globals.css";
-import Footer from "./footer";
-import Header from "./header";
+
 
 function SearchResult() {
   const [resultados, setResultados] = useState([]);
@@ -47,6 +46,7 @@ function SearchResult() {
               <div className="card-details">
                 <span className="card-rating">⭐ {trabalho.avaliation}</span>
                 <span className="card-price">R${trabalho.price}</span>
+                <span className="card-location">{trabalho.location}</span>
               </div>
             </div>
           ))}

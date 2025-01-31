@@ -43,11 +43,17 @@ a {
   }
 }
 
+.home {
+  margin: 100px;
+}
+
 .presentation_home {
   background-color: #8183DA; 
   color: #ffffff; 
-  padding: 2rem; 
-  max-width: 1200px;
+  padding: 2rem;
+  height: 40vh;
+  width: 150vh; 
+  max-width: 1000px;
   margin: 10vh auto; 
   transition: transform 0.3s ease; 
 }
