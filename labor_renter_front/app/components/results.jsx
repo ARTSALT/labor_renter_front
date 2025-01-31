@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import "../globals.css";
+import Footer from "./footer";
+import Header from "./header";
 
 function SearchResult() {
   const [resultados, setResultados] = useState([]);
@@ -34,20 +36,21 @@ function SearchResult() {
   if (error) return <p>Erro: {error}</p>;
 
   return (
-    <div>
+    <div className="search-results">
       <h1>Resultados para: {query}</h1>
       {resultados.length > 0 ? (
-        <ul>
+        <div className="cards-container">
           {resultados.map((trabalho) => (
-            <li key={trabalho.id}>
-              <h2>{trabalho.workerName}</h2>
-              <p>{trabalho.description}</p>
-              <small>Avaliação: {trabalho.avaliation}</small>
-              <small>Localização: {trabalho.location}</small>
-              <small>Contratos: {trabalho.contractIds.join(", ")}</small>
-            </li>
+            <div key={trabalho.id} className="card">
+              <h2 className="card-title">{trabalho.workerName}</h2>
+              <p className="card-description">{trabalho.description}</p>
+              <div className="card-details">
+                <span className="card-rating">⭐ {trabalho.avaliation}</span>
+                <span className="card-price">R${trabalho.price}</span>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : (
         <p>Nenhum resultado encontrado.</p>
       )}
