@@ -5,10 +5,10 @@ import Footer from "./footer";
 
 function RegistrationForm() {
     const [formData, setFormData] = useState({
-        nomeCompleto: "",
+        name: "",
         email: "",
-        senha: "",
-        confirmarSenha: "",
+        password: "",
+        confirmPassword: "",
         cpf: "",
         cep: "",
         rua: "",
@@ -29,9 +29,9 @@ function RegistrationForm() {
     const validateForm = () => {
         const newErrors = {};
 
-        if (!formData.nomeCompleto) newErrors.nomeCompleto = "Nome completo é obrigatório";
+        if (!formData.name) newErrors.name = "Nome completo é obrigatório";
         if (!formData.email) newErrors.email = "E-mail é obrigatório";
-        if (!formData.senha) newErrors.senha = "Senha é obrigatória";
+        if (!formData.password) newErrors.password = "Senha é obrigatória";
         if (!formData.cpf) newErrors.cpf = "CPF é obrigatório";
         if (!formData.cep) newErrors.cep = "CEP é obrigatório";
         if (!formData.rua) newErrors.rua = "Rua é obrigatória";
@@ -59,9 +59,10 @@ function RegistrationForm() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(formData)
+                
             });
 
-            if (!response.ok) throw new Error("Erro ao cadastrar");
+            if (response.status === 500) throw new Error("Erro ao cadastrar");
 
             const data = await response.json();
             console.log("Sucesso:", data);
@@ -81,9 +82,9 @@ function RegistrationForm() {
                 <div className="form_group">
                     <input
                         type="text"
-                        name="nomeCompleto"
-                        placeholder="Nome Completo"
-                        value={formData.nomeCompleto}
+                        name="name"
+                        placeholder="name"
+                        value={formData.name}
                         onChange={handleChange}
                     />
                     <input
@@ -98,17 +99,17 @@ function RegistrationForm() {
                 <div className="form_group">
                     <input
                         type="password"
-                        name="senha"
-                        placeholder="Senha"
-                        value={formData.senha}
+                        name="password"
+                        placeholder="password"
+                        value={formData.password}
                         onChange={handleChange}
                     />
 
                     <input
                         type="password"
-                        name="confirmarSenha"
-                        placeholder="Confirmar Senha"
-                        value={formData.confirmarSenha}
+                        name="confirmarpassword"
+                        placeholder="Confirmar password"
+                        value={formData.confirmarpassword}
                         onChange={handleChange}
                     />
 
